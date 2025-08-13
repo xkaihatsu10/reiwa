@@ -1,0 +1,185 @@
+:root {
+    --primary-color: #4a90e2;
+    --dark-text: #333;
+    --light-text: #f8f9fa;
+    --background-color: #ffffff;
+    --section-bg-color: #f8f9fa;
+    --footer-bg-color: #343a40;
+}
+
+body {
+    margin: 0;
+    font-family: 'Noto Sans JP', sans-serif;
+    line-height: 1.7;
+    color: var(--dark-text);
+    background-color: var(--background-color);
+}
+
+.container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Header */
+header {
+    background: var(--background-color);
+    padding: 20px 0;
+    border-bottom: 1px solid #e9ecef;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 28px;
+    text-align: center;
+}
+
+/* Hero Section */
+.hero {
+    text-align: center;
+    padding: 80px 0;
+    background-color: var(--section-bg-color);
+}
+
+.hero h2 {
+    font-size: 42px;
+    margin-top: 0;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-size: 18px;
+    color: #555;
+    margin-bottom: 40px;
+}
+
+.cta-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.store-badge img {
+    height: 60px;
+    transition: transform 0.2s ease-in-out;
+}
+.store-badge:hover img {
+    transform: scale(1.05);
+}
+
+
+/* Overview & Contact Section */
+.overview, .contact {
+    padding: 60px 0;
+    text-align: center;
+}
+.overview {
+    background-color: var(--background-color);
+}
+.contact {
+    background-color: var(--section-bg-color);
+}
+
+.overview h3 {
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+
+.button-primary {
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    padding: 15px 30px;
+    font-size: 18px;
+    font-weight: bold;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.button-primary:hover {
+    background-color: #357abd;
+    transform: translateY(-2px);
+}
+
+/* Footer */
+footer {
+    background-color: var(--footer-bg-color);
+    color: var(--light-text);
+    padding: 40px 0;
+    text-align: center;
+}
+
+.footer-nav a {
+    color: var(--light-text);
+    text-decoration: none;
+    margin: 0 15px;
+    transition: color 0.3s;
+}
+
+.footer-nav a:hover {
+    color: var(--primary-color);
+}
+
+.copyright {
+    margin-top: 20px;
+    font-size: 14px;
+    color: #adb5bd;
+}
+
+/* Modal (Popup) Styles */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.6);
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 10% auto;
+    padding: 30px;
+    border: 1px solid #888;
+    width: 80%;
+    max-width: 800px;
+    border-radius: 8px;
+    position: relative;
+}
+
+.modal-text {
+    max-height: 60vh;
+    overflow-y: auto;
+    white-space: pre-wrap; /* 改行を反映させる */
+}
+
+.close-button {
+    color: #aaa;
+    position: absolute;
+    top: 15px;
+    right: 25px;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close-button:hover,
+.close-button:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .hero h2 {
+        font-size: 32px;
+    }
+    .hero p {
+        font-size: 16px;
+    }
+}
